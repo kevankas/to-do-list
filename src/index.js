@@ -35,4 +35,13 @@ newpj.addEventListener("click", function() {
     // prompt("Enter Project Name: ");
     i = prompt("Enter Project Name: ");
     console.log(i);
-})
+    addProject(i);
+});
+
+function addProject(title)
+{
+    const divThree = document.createElement("div");
+    divThree.textContent = title;
+    divThree.classList.add("project");
+    testing.appendChild(divThree);
+}
