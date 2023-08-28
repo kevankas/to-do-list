@@ -4,8 +4,8 @@ class todoItems
     {
         this.title = title;
         this.description = description;
-        this.dueDate = dueDate;
-        this.priority = priority;
+        this.dueDate = dueDate; //pulls up calendar
+        this.priority = priority; //low medium high
     }
 }
 
@@ -18,4 +18,21 @@ const item1 = new todoItems(
   
   console.log(item1);
 
-  
+const testing = document.getElementById("options");
+const divOne = document.createElement("div");
+divOne.textContent = "hello world";
+divOne.classList.add("project");
+testing.appendChild(divOne);
+
+const divTwo = document.createElement("div");
+divTwo.textContent = "hello world two";
+divTwo.classList.add("project");
+testing.appendChild(divTwo);
+
+const newpj = document.getElementById("pj");
+newpj.addEventListener("click", function() {
+    let i = 0;
+    // prompt("Enter Project Name: ");
+    i = prompt("Enter Project Name: ");
+    console.log(i);
+})
