@@ -1,0 +1,1 @@
+(()=>{const t=new class{constructor(t,e,o,i){this.title=t,this.description=e,this.dueDate=o,this.priority=i}}("Complete Project Proposal","Write a detailed project proposal for the upcoming client meeting.","2023-09-15","High");console.log(t)})();
