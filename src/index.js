@@ -24,10 +24,21 @@ divOne.textContent = "hello world";
 divOne.classList.add("project");
 testing.appendChild(divOne);
 
+const newButtonOne = document.createElement("button");
+newButtonOne.textContent = "-";
+newButtonOne.classList.add("pbutton");
+divOne.appendChild(newButtonOne);
+
+
 const divTwo = document.createElement("div");
 divTwo.textContent = "hello world two";
 divTwo.classList.add("project");
 testing.appendChild(divTwo);
+
+const newButtonTwo = document.createElement("button");
+newButtonTwo.textContent = "-";
+newButtonTwo.classList.add("pbutton");
+divTwo.appendChild(newButtonTwo);
 
 const newpj = document.getElementById("pj");
 newpj.addEventListener("click", function() {
@@ -44,4 +55,22 @@ function addProject(title)
     divThree.textContent = title;
     divThree.classList.add("project");
     testing.appendChild(divThree);
+
+    const newButton = document.createElement("button");
+    newButton.textContent = "-";
+    newButton.classList.add("pbutton");
+    divThree.appendChild(newButton);
+
+    
+
 }
+
+// function removeDiv(){
+    const parentContainer = document.getElementById("options");
+
+    parentContainer.addEventListener("click", function(event) {
+    if (event.target.classList.contains("pbutton")) {
+        event.target.parentNode.remove();
+    }
+    });
+// }
