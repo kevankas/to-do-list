@@ -20,7 +20,7 @@ const item1 = new todoItems(
 
 const testing = document.getElementById("options");
 const divOne = document.createElement("div");
-divOne.textContent = "hello world";
+divOne.textContent = "Home";
 divOne.classList.add("project");
 testing.appendChild(divOne);
 
@@ -31,7 +31,7 @@ divOne.appendChild(newButtonOne);
 
 
 const divTwo = document.createElement("div");
-divTwo.textContent = "hello world two";
+divTwo.textContent = "School";
 divTwo.classList.add("project");
 testing.appendChild(divTwo);
 
@@ -44,9 +44,18 @@ const newpj = document.getElementById("pj");
 newpj.addEventListener("click", function() {
     let i = 0;
     // prompt("Enter Project Name: ");
-    i = prompt("Enter Project Name: ");
-    console.log(i);
-    addProject(i);
+    do {
+        i = prompt("Enter Project Name: ");
+        if (i === "") {
+          alert("Please enter a valid value.");
+        }
+      } while (i === "");
+
+      if (i !== null) {
+        console.log(i);
+        addProject(i);
+      }
+    
 });
 
 function addProject(title)
@@ -74,3 +83,4 @@ function addProject(title)
     }
     });
 // }
+

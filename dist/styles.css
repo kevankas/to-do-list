@@ -51,12 +51,12 @@ html, body
 }
 .all
 {
-    width: 100%;
+    width: 90%;
+    font-size: 40px;
 }
 .projects
 {
-    width: 100%;
-    display: flex;
+    width: 90%;
 }
 .border
 {
@@ -65,14 +65,25 @@ html, body
 }
 .project
 {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
  
 }
 .pbutton
 {
     width: 24px;
     height: 24px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pjroot
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
 }
