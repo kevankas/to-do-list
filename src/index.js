@@ -69,6 +69,16 @@ function addProject(title)
     newButton.textContent = "-";
     newButton.classList.add("pbutton");
     divThree.appendChild(newButton);
+    
+    let newDivs = document.createElement("div");
+let mainc = document.getElementById("maincontent");
+newDivs.classList.add("displayProject")
+let newD = document.createElement("div");
+mainc.appendChild(newDivs);
+newD.textContent = title;
+newD.classList.add("mainHeader");
+newDivs.appendChild(newD);
+
 
     
 
@@ -84,3 +94,12 @@ function addProject(title)
     });
 // }
 
+
+// let newDivs = document.createElement("div");
+// let mainc = document.getElementById("maincontent");
+// newDivs.classList.add("displayProject")
+// let newD = document.createElement("div");
+// mainc.appendChild(newDivs);
+// newD.textContent = i;
+// newD.classList.add("mainHeader");
+// newDivs.appendChild(newD);
