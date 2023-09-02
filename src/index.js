@@ -69,29 +69,14 @@ function addProject(title)
     newButton.textContent = "-";
     newButton.classList.add("pbutton");
     divThree.appendChild(newButton);
-    
-    let newDivs = document.createElement("div");
-let mainc = document.getElementById("maincontent");
-newDivs.classList.add("displayProject")
-let newD = document.createElement("div");
-mainc.appendChild(newDivs);
-newD.textContent = title;
-newD.classList.add("mainHeader");
-newDivs.appendChild(newD);
 
-
-    
+    addTitle(title);
+     
 
 }
 
 // function removeDiv(){
-    const parentContainer = document.getElementById("options");
-
-    parentContainer.addEventListener("click", function(event) {
-    if (event.target.classList.contains("pbutton")) {
-        event.target.parentNode.remove();
-    }
-    });
+    
 // }
 
 
@@ -103,3 +88,29 @@ newDivs.appendChild(newD);
 // newD.textContent = i;
 // newD.classList.add("mainHeader");
 // newDivs.appendChild(newD);
+
+
+function addTitle(titleInput)
+{
+  let newDivs = document.createElement("div");
+  let mainc = document.getElementById("maincontent");
+  newDivs.classList.add("displayProject")
+  let newD = document.createElement("div");
+  mainc.appendChild(newDivs);
+  newD.textContent = titleInput;
+  newD.classList.add("mainHeader");
+  newDivs.appendChild(newD);
+  
+  const parentContainer = document.getElementById("options");
+
+    parentContainer.addEventListener("click", function(event) {
+    if (event.target.classList.contains("pbutton")) {
+        event.target.parentNode.remove();
+       newDivs.remove();
+    }
+    
+    
+    });
+    
+}
+
