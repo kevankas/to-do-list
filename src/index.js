@@ -96,16 +96,37 @@ function addTitle(titleInput)
   let mainc = document.getElementById("maincontent");
   newDivs.classList.add("displayProject")
   let newD = document.createElement("div");
+  let bTitle = document.createElement("div");
+  let bButton = document.createElement("button");
+  let divAddBtn = document.createElement("div");
+  let mBody = document.createElement("div");
+  let bHeader = document.createElement("div");
+  
   mainc.appendChild(newDivs);
-  newD.textContent = titleInput;
+  // newD.textContent = titleInput;
   newD.classList.add("mainHeader");
+  bTitle.classList.add("bodyTitle");
+  bTitle.textContent = titleInput;
+  bButton.classList.add("addBtn");
+  bButton.textContent = "Add Task";
+  divAddBtn.classList.add("addButton");
   newDivs.appendChild(newD);
+  newD.appendChild(bTitle);
+  newD.appendChild(divAddBtn);
+  divAddBtn.appendChild(bButton);
+  mBody.classList.add("mainBody");
+  bHeader.classList.add("bodyHeader");
+  bHeader.textContent = "Seems like there is nothing to be done yet..."
+  newDivs.appendChild(mBody);
+  mBody.appendChild(bHeader);
+ 
   
   const parentContainer = document.getElementById("options");
 
     parentContainer.addEventListener("click", function(event) {
     if (event.target.classList.contains("pbutton")) {
         event.target.parentNode.remove();
+        
        newDivs.remove();
     }
     
