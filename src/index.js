@@ -119,6 +119,14 @@ function addTitle(titleInput)
   bHeader.textContent = "Seems like there is nothing to be done yet..."
   newDivs.appendChild(mBody);
   mBody.appendChild(bHeader);
+
+divAddBtn.addEventListener("click", function()
+{
+  let promptTask = prompt("Enter a task: ");
+  bHeader.textContent = promptTask;
+  mBody.appendChild(bHeader);
+  mBody.appendChild(bHeader);
+})
  
   
   const parentContainer = document.getElementById("options");
